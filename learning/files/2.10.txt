@@ -1,0 +1,44 @@
+Assignment Operators and Expressions:
+
+Assignment operators in C play a crucial role in variable manipulation and concise code writing. They provide a way to both assign values to variables and perform operations in a single expression, enhancing code readability and efficiency.
+
+Simple Assignment (=):
+
+The simple assignment operator, denoted by '=', assigns the value on the right-hand side to the variable on the left-hand side. For example:
+
+int x = 10; // Assigns the value 10 to variable x
+
+Addition Assignment (+=):
+
+The addition assignment operator, '+=', adds the value on the right-hand side to the current value of the variable on the left-hand side. This compound assignment is equivalent to the longer form 'x = x + 3', resulting in concise code. For instance:
+
+int x = 5;
+x += 3; // Results in x having the value 8
+
+Subtraction Assignment (-=):
+
+The subtraction assignment operator, '-=', subtracts the value on the right-hand side from the current value of the variable on the left-hand side. Similar to addition assignment, it provides a shorter alternative. For example:
+
+int x = 10;
+x -= 4; // Results in x having the value 6
+
+Multiplication Assignment (*=):
+
+The multiplication assignment operator, '*=', multiplies the current value of the variable on the left-hand side by the value on the right-hand side. This operation is performed in a concise manner. For instance:
+
+Division Assignment (/=):
+
+The division assignment operator, '/=', divides the current value of the variable on the left-hand side by the value on the right-hand side. It's a compact way to perform division and assignment simultaneously. For example:
+
+int x = 8;
+x /= 2; // Results in x having the value 4
+
+
+Modulus Assignment (%=):
+
+The modulus assignment operator, '%=', calculates the modulus (remainder) of the current value of the variable on the left-hand side divided by the value on the right-hand side. This operation is succinct and can be used in various scenarios. For instance:
+
+int x = 7;
+x %= 3; // Results in x having the value 1
+
+Assignment operators provide a streamlined approach to variable manipulation, especially in scenarios involving repetitive tasks like loops. Their concise syntax and efficiency make them an integral part of C programming, and understanding their functionality is vital for writing clean and readable code.

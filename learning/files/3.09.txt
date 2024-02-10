@@ -1,0 +1,36 @@
+Goto and Labels
+
+The `goto` statement and labels are features in some programming languages that allow for unstructured jumps in the code, enabling the programmer to transfer control to a specified location within the program. However, it is important to note that the use of `goto` is generally discouraged in modern programming practices due to its potential to create spaghetti code and make the program harder to understand and maintain. Structured programming constructs like loops and conditionals are usually preferred for better code organization.
+
+Here's a basic explanation of `goto` and labels:
+
+### `goto` Statement:
+
+The `goto` statement is used to jump to a labeled statement in the code. A label is a user-defined identifier followed by a colon (`:`) and is placed before the statement to which the program should jump. Once the `goto` statement is encountered, the program transfers control to the labeled statement.
+
+### Example in C:
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Example of goto statement in C
+
+    int i = 1;
+
+    // Label
+    start_loop:
+
+    if (i <= 5) {
+        printf("Iteration %d\n", i);
+        i++;
+        goto start_loop;  // Jump back to the labeled statement
+    }
+
+    return 0;
+}
+```
+
+In this example, the program uses `goto` to create a loop-like structure. However, note that this approach is not recommended in practice, and using `for` or `while` loops is a better alternative.
+
+While `goto` can be a powerful tool in certain situations, it can lead to unreadable and error-prone code if not used judiciously. Most modern programming languages provide structured constructs that offer better alternatives for organizing and controlling program flow.

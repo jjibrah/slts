@@ -1,0 +1,97 @@
+Command-line Arguments
+
+Command-line arguments in C provide a way to pass information to a program when it is executed from the command line. These arguments are specified after the program name and are accessible within the program through the `main` function's parameters.
+
+### Basic Usage:
+
+The `main` function in C can take two parameters: `argc` (argument count) and `argv` (argument vector).
+
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+    // argc is the count of command-line arguments
+    printf("Argument count: %d\n", argc);
+
+    // argv is an array of strings containing the command-line arguments
+    for (int i = 0; i < argc; i++) {
+        printf("Argument %d: %s\n", i, argv[i]);
+    }
+
+    return 0;
+}
+```
+
+In this example, `argc` represents the number of command-line arguments (including the program name), and `argv` is an array of strings containing the actual arguments. The first argument in `argv` (`argv[0]`) is the program name.
+
+### Running the Program:
+
+To run this program with command-line arguments, compile the code and execute the compiled binary from the command line:
+
+```bash
+gcc command_line_args.c -o myprogram
+./myprogram arg1 arg2 arg3
+```
+
+The output will be:
+
+```
+Argument count: 4
+Argument 0: ./myprogram
+Argument 1: arg1
+Argument 2: arg2
+Argument 3: arg3
+```
+
+### Use Cases:
+
+1. **Parameterized Execution:**
+   - Command-line arguments allow users to provide input parameters to a program, influencing its behavior.
+
+2. **Scripting and Automation:**
+   - Command-line arguments are commonly used in scripting and automation tasks, where different configurations can be passed to a script or utility.
+
+3. **Batch Processing:**
+   - Programs that perform batch processing can use command-line arguments to specify input files, output locations, or other processing parameters.
+
+### Parsing Command-line Arguments:
+
+Libraries like `getopt` or `argp` can be used for more advanced parsing of command-line arguments, handling options and values in a structured manner. Here's a basic example using `getopt`:
+
+```c
+#include <stdio.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[]) {
+    int opt;
+
+    // Use getopt for parsing command-line options
+    while ((opt = getopt(argc, argv, "abc:")) != -1) {
+        switch (opt) {
+            case 'a':
+                printf("Option a selected\n");
+                break;
+            case 'b':
+                printf("Option b selected\n");
+                break;
+            case 'c':
+                printf("Option c with value: %s\n", optarg);
+                break;
+            default:
+                fprintf(stderr, "Usage: %s -a -b -c value\n", argv[0]);
+                return 1;
+        }
+    }
+
+    // Additional processing with non-option arguments (if any)
+    for (int i = optind; i < argc; i++) {
+        printf("Non-option argument: %s\n", argv[i]);
+    }
+
+    return 0;
+}
+```
+
+In this example, options `-a`, `-b`, and `-c` are recognized, and `-c` requires an associated value. The `getopt` function helps in parsing and handling command-line options.
+
+Understanding command-line arguments is crucial for building versatile and user-friendly command-line applications in C. Advanced parsing techniques can be applied based on the complexity and requirements of the application.

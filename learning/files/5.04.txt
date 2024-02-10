@@ -1,0 +1,122 @@
+Address Arithmetic
+
+
+Address arithmetic in C involves manipulating memory addresses using pointer arithmetic. Understanding how to perform operations such as addition, subtraction, and array indexing with pointers is essential for efficient memory management and data manipulation.
+
+### Pointer Arithmetic Basics:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = arr; // Pointer to the first element of the array
+
+    // Accessing array elements using pointer arithmetic
+    printf("Element at index 2: %d\n", *(ptr + 2)); // Output: 30
+
+    // Incrementing the pointer to access the next element
+    ptr++;
+    printf("Next element: %d\n", *ptr); // Output: 20
+
+    return 0;
+}
+```
+
+In this example, `ptr` is a pointer to the first element of the array `arr`. Pointer arithmetic is used to access array elements and move the pointer to the next element.
+
+### Address Arithmetic with Arrays:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = arr; // Pointer to the first element of the array
+
+    // Using array indexing and pointer arithmetic
+    printf("Element at index 3: %d\n", arr[3]);       // Output: 40
+    printf("Element at index 3: %d\n", *(ptr + 3));    // Output: 40
+    printf("Element at index 3: %d\n", *(arr + 3));    // Output: 40
+    printf("Element at index 3: %d\n", ptr[3]);        // Output: 40
+
+    return 0;
+}
+```
+
+Here, various ways of accessing the element at index 3 of the array `arr` are demonstrated using both array indexing and pointer arithmetic.
+
+### Pointer Arithmetic with Different Data Types:
+
+```c
+#include <stdio.h>
+
+int main() {
+    double doubleArr[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+    double *doublePtr = doubleArr; // Pointer to the first element of the double array
+
+    // Accessing double array elements using pointer arithmetic
+    printf("Element at index 2: %.2lf\n", *(doublePtr + 2)); // Output: 3.30
+
+    return 0;
+}
+```
+
+Pointer arithmetic can also be used with arrays of different data types. In this example, `doublePtr` is a pointer to the first element of the `doubleArr` array.
+
+### Pointer Arithmetic and the Sizeof Operator:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = arr; // Pointer to the first element of the array
+
+    // Using the sizeof operator in pointer arithmetic
+    for (int i = 0; i < 5; i++) {
+        printf("Element %d: %d\n", i, *ptr);
+        ptr += sizeof(int); // Move the pointer by the size of an int
+    }
+
+    return 0;
+}
+```
+
+The `sizeof` operator is used to calculate the size of the data type (in bytes). In this example, the pointer is incremented by the size of an `int` to navigate through the array.
+
+### Use Cases:
+
+1. **Array Traversal:**
+   - Pointer arithmetic is commonly used to traverse arrays efficiently.
+
+2. **Dynamic Memory Allocation:**
+   - Memory allocation functions like `malloc` and `calloc` return pointers, and pointer arithmetic is often used to navigate through dynamically allocated memory.
+
+3. **Manipulating Arrays:**
+   - Arrays of different data types can be efficiently manipulated using pointer arithmetic.
+
+### Pointer Arithmetic in Structures:
+
+```c
+#include <stdio.h>
+
+struct Point {
+    int x;
+    int y;
+};
+
+int main() {
+    struct Point points[] = {{1, 2}, {3, 4}, {5, 6}};
+    struct Point *ptr = points; // Pointer to the first element of the array
+
+    // Accessing structure elements using pointer arithmetic
+    printf("Point 2: (%d, %d)\n", (ptr + 1)->x, (ptr + 1)->y); // Output: Point 2: (3, 4)
+
+    return 0;
+}
+```
+
+Pointer arithmetic is not limited to arrays; it can also be used with structures. In this example, `ptr` is a pointer to the first element of the `points` array of structures, and pointer arithmetic is used to access the elements of the structure array.
+
+Understanding and applying address arithmetic in C is crucial for efficient and precise memory manipulation. Pointer arithmetic provides flexibility and efficiency in navigating through arrays, structures, and dynamically allocated memory. However, caution should be exercised to avoid accessing memory beyond the boundaries of allocated space, as it can lead to undefined behavior.

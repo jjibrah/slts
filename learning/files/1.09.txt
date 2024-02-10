@@ -1,0 +1,76 @@
+Knowing Argument Structure in C Programming:
+
+"Arguments" are values passed to a function at function invocation in C programming, which enable the function to work with particular inputs. C functions define parameters, together with the expected types and number of values, to receive these arguments.
+
+Function parameters are variables that specify the data types and intended argument order. They are listed in the parameter list of a function. The function printSum in the example above takes two parameters, a and b, and outputs their sum. The arguments 3 and 5 are supplied to the function when it is called with printSum(3, 5), in order to match the parameters.
+
+Techniques for Passing Arguments:
+
+Use Value to Pass:
+
+The most popular approach in C.
+copies the arguments' real values into the function parameters.
+The original values remain unchanged when parameters within the function are changed.
+For instance:
+
+#include <stdio.h>
+
+void changeValue(int x) {
+    x = 10;
+}
+
+int main() {
+    int num = 5;
+    changeValue(num);
+    printf("Original value: %d\n", num); // Output: Original value: 5
+    return 0;
+}
+
+
+By Reference (with the use of pointers):
+
+enables the function to change the initial values of variables by giving their memory address, or reference.
+The initial values are affected by modifications performed within the function.
+For instance:
+
+#include <stdio.h>
+
+void changeValue(int *x) {
+    *x = 10;
+}
+
+int main() {
+    int num = 5;
+    changeValue(&num);
+    printf("Modified value: %d\n", num); // Output: Modified value: 10
+    return 0;
+}
+
+Lists of Variable Arguments (varargs):
+
+Using the <stdarg.h> header, which is frequently used in methods like printf, C enables variable argument lists.
+enables the acceptance of a variable number of arguments by functions.
+For instance:
+
+#include <stdio.h>
+#include <stdarg.h>
+
+void printValues(int num, ...) {
+    va_list args;
+    va_start(args, num);
+
+    for (int i = 0; i < num; i++) {
+        int value = va_arg(args, int);
+        printf("%d ", value);
+    }
+
+    va_end(args);
+    printf("\n");
+}
+
+int main() {
+    // Calling the function with variable arguments
+    printValues(3, 10, 20, 30); // Output: 10 20 30
+    return 0;
+}
+

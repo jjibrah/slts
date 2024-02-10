@@ -1,0 +1,24 @@
+WHILE
+
+The while loop is a fundamental control flow structure in programming that allows a set of statements to be repeatedly executed as long as a specified condition is true. It is useful when the number of iterations is not known beforehand, and the loop continues until the condition becomes false. The while loop consists of a condition and a block of code. The condition is evaluated before each iteration, and if it is true, the code within the block is executed. The loop continues until the condition becomes false, at which point the program moves to the next statement after the while loop.
+
+#include <stdio.h>
+
+int main() {
+    // Example of a while loop in C
+
+    // Initialize a counter
+    int i = 1;
+
+    // Loop while the counter is less than or equal to 5
+    while (i <= 5) {
+        printf("Iteration %d\n", i);
+        i++; // Increment the counter
+    }
+
+    return 0;
+}
+
+In this example, the while loop prints the message "Iteration x" for each value of i from 1 to 5. The loop continues as long as the condition i <= 5 is true. The counter i is incremented in each iteration to eventually satisfy the exit condition and terminate the loop.
+
+It's crucial to be cautious when using while loops to avoid infinite loops if the condition is never met. Proper initialization of loop control variables and careful consideration of exit conditions are essential for the correct and safe use of while loops.

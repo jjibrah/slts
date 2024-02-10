@@ -1,0 +1,20 @@
+Comprehending C Functions:
+
+
+Functions in C are crucial for improving the readability, maintainability, and reusability of code by breaking it up into modular and reusable components. Important ideas about functions include:
+
+Function Definition and Declaration: In C, functions are defined by defining their name, parameters, and return type in a prototype. The primary function is presented before the actual implementation. The add function, which takes two numbers and returns their sum, is shown in the example.
+
+Function Parameters: Values are returned by functions upon receiving parameters (inputs). Variables declared in the parameter list of the function are called parameters. For example, the greet function requires a single const char* parameter named.
+
+Return Statement: The return statement is used by functions that return values to describe the outcome. The example of the square function shows how to calculate number
+
+Function Prototypes: These are statements that list the signature of a function but do not include the implementation. Before declaring a function, they permit its use. Particularly helpful are prototypes in cases where functions are declared in different files.
+
+Recursive Functions: Recursive functions are produced when functions call one another. The example uses a recursive function to get a number's factorial.
+
+Function Scope: Local variables are only accessible within a function and are declared inside of it. Variables with a local scope include parameters and local variables.
+
+External Functions: During compilation, functions can be linked from distinct files in which they are declared. In the calling file, a function prototype must be created, and the implementation must be provided in a separate file.
+
+Functions are fundamental to the way C programs are organized, helping developers to solve difficult problems by breaking them down into smaller, more manageable tasks.

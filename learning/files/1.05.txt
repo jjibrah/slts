@@ -1,0 +1,66 @@
+Symbolic Constants:
+
+Symbolic constants in C serve as identifiers representing constant values within a program. They offer a way to define meaningful names for constants, contributing to improved code readability and maintainability. Symbolic constants are typically created using either the #define preprocessor directive or, in C99 and later, the const keyword.
+
+#include <stdio.h>
+
+// Define a symbolic constant using #define
+#define PI 3.14159
+
+int main() {
+    double radius = 5.0;
+    double area;
+
+    // Use the symbolic constant in calculations
+    area = PI * radius * radius;
+
+    printf("Area of the circle: %f\n", area);
+
+    return 0;
+}
+
+In this example, PI is a symbolic constant representing the value of π (pi). During compilation, all occurrences of PI in the code will be replaced with the actual value 3.14159.
+
+Using const Keyword (C99 and later):
+
+#include <stdio.h>
+
+int main() {
+    // Define a symbolic constant using const keyword
+    const double PI = 3.14159;
+
+    double radius = 5.0;
+    double area;
+
+    // Use the symbolic constant in calculations
+    area = PI * radius * radius;
+
+    printf("Area of the circle: %f\n", area);
+
+    return 0;
+}
+
+Here, const double PI achieves the same result as the #define version. The const keyword indicates that the variable PI is a constant, and its value cannot be changed once assigned.
+
+Advantages of Symbolic Constants:
+
+Readability:
+Symbolic constants enhance code readability by providing meaningful names to constants, improving code understanding.
+
+Maintainability:
+When the value of a constant needs to be changed, updating it in one place (the constant's definition) is sufficient, reducing the chance of errors.
+
+Prevents Magic Numbers:
+Symbolic constants replace hard-coded numerical values, making the code more self-explanatory. For instance:
+
+// Without symbolic constant
+if (score > 60) {
+    // Do something
+}
+
+// With symbolic constant
+#define PASSING_SCORE 60
+
+if (score > PASSING_SCORE) {
+    // Do something
+}

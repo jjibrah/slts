@@ -1,0 +1,111 @@
+TABLE LOOKUP
+
+In C programming, table lookup refers to the process of accessing values stored in a table or array based on an index or key. Tables are often used to store precomputed values, lookup tables, or mappings between different data sets. Here, we'll explore the concept of table lookup and provide an example.
+
+### Basic Table Lookup:
+
+```c
+#include <stdio.h>
+
+// Define a table (array) of square roots
+double squareRoots[] = {0.0, 1.0, 1.414, 1.732, 2.0, 2.236, 2.449, 2.646, 2.828, 3.0};
+
+int main() {
+    // Perform table lookup
+    int index = 5;
+    double result = squareRoots[index];
+
+    // Display the result
+    printf("Square root of %d is: %f\n", index, result);
+
+    return 0;
+}
+```
+
+In this example, `squareRoots` is an array representing square root values. The value at index 5 is looked up, and the result is displayed. This is a basic form of table lookup, where the index corresponds to the position of the desired value in the table.
+
+### Table Lookup with Enumerations:
+
+```c
+#include <stdio.h>
+
+// Define an enumeration for days of the week
+enum Days {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
+
+// Define a table (array) of day names
+const char *dayNames[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+int main() {
+    // Perform table lookup using enumeration
+    enum Days today = Wednesday;
+    const char *result = dayNames[today];
+
+    // Display the result
+    printf("Today is: %s\n", result);
+
+    return 0;
+}
+```
+
+In this example, an enumeration `enum Days` is used to represent days of the week. The `dayNames` array serves as a table mapping enumeration values to corresponding day names.
+
+### Table Lookup with Structures:
+
+```c
+#include <stdio.h>
+
+// Define a structure for book information
+struct Book {
+    int bookID;
+    const char *title;
+    const char *author;
+};
+
+// Define a table (array) of books
+struct Book library[] = {
+    {1, "The Great Gatsby", "F. Scott Fitzgerald"},
+    {2, "To Kill a Mockingbird", "Harper Lee"},
+    {3, "1984", "George Orwell"}
+};
+
+int main() {
+    // Perform table lookup using book ID
+    int bookID = 2;
+    const char *resultTitle = library[bookID - 1].title;
+    const char *resultAuthor = library[bookID - 1].author;
+
+    // Display the result
+    printf("Book ID %d: %s by %s\n", bookID, resultTitle, resultAuthor);
+
+    return 0;
+}
+```
+
+Here, a structure `struct Book` is used to represent book information. The `library` array serves as a table mapping book IDs to corresponding book details.
+
+### Use Cases:
+
+1. **Data Precomputation:**
+   - Use table lookup for storing precomputed values, avoiding redundant computations.
+
+2. **Mappings and Associations:**
+   - Create tables to map between different sets of data or provide associations between keys and values.
+
+3. **Resource Management:**
+   - Employ table lookup to manage and access resources efficiently, such as days of the week, book information, etc.
+
+### Best Practices:
+
+1. **Array Bounds Checking:**
+   - Ensure that the index used for table lookup is within the valid range to avoid undefined behavior.
+
+2. **Use Enumerations for Indices:**
+   - When using indices, consider using enumerations for improved readability and code maintenance.
+
+3. **Documentation:**
+   - Document the purpose and structure of lookup tables to make the code more understandable for other developers.
+
+4. **Efficient Data Storage:**
+   - Optimize the storage of tables based on the characteristics of the data and access patterns.
+
+Table lookup is a versatile technique in C programming that allows for efficient and organized storage and retrieval of data. Whether used for mathematical computations, mapping values, or managing resources, tables provide a systematic way to organize and access information within a program.

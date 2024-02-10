@@ -1,0 +1,41 @@
+Type Conversions in C:
+
+In C programming, type conversions, also known as casting, refer to the process of converting a value from one data type to another. This is essential when working with different data types in expressions or assignments.
+
+Implicit Type Conversion (Coercion):
+
+- Implicit type conversion occurs automatically when the compiler handles conversions without explicit instructions from the programmer.
+- It often happens when mixing different data types in expressions.
+- Example:
+  ```c
+  int num1 = 5;
+  double num2 = 2.5;
+  double sum = num1 + num2; // Implicit conversion of num1 to double before addition
+  ```
+
+**Explicit Type Conversion (Casting):**
+
+- Explicit type conversion is performed by the programmer using casting operators.
+- Two common casting operators are `(type)` and `type(value)`.
+- Example:
+  ```c
+  double average;
+  int total = 75;
+  int count = 10;
+
+  average = (double)total / count; // Explicitly converting total to double for accurate division
+  ```
+
+**Type Promotion and Demotion:**
+
+- Type promotion occurs when a value of a smaller data type is automatically converted to a larger data type.
+- Type demotion, on the other hand, involves converting a value from a larger data type to a smaller one, and it may result in loss of precision.
+- Example:
+  ```c
+  int intValue = 50;
+  double doubleValue;
+
+  doubleValue = intValue; // Type promotion (int to double)
+  ```
+
+Understanding type conversions is crucial for handling different data types effectively in C. It ensures proper computation, avoids unintended data loss, and enhances code flexibility. Both implicit and explicit conversions have their use cases, and careful consideration is necessary to prevent unexpected behavior.

@@ -1,0 +1,44 @@
+1. Overview of External Variables:
+
+External variables in C programming are declared outside functions, granting them global scope. This means they are accessible and modifiable by any function within the program. In the provided example, globalVariable serves as an external variable with a global scope. This facilitates data sharing among functions, promoting a streamlined approach for common data accessible throughout the program. However, it's crucial to exercise caution in their use, as excessive reliance on external variables may lead to potential issues related to global state and code maintainability.
+
+
+2. Scope and Visibility:
+External variables possess file scope, remaining visible to all functions within the same C file where declared. If the same variable name is used in another file, it becomes a distinct variable with a separate storage location. To manage visibility, the static keyword can be employed. When declared as static, the scope of the external variable is confined to the file of its declaration. This feature provides a balance, allowing programmers to control the accessibility of external variables based on program requirements.
+
+// Declaration of an external variable
+int globalVariable = 10;
+
+// Function declaration
+void function1();
+void function2();
+
+int main() {
+    // Accessing the global variable in the main function
+    printf("Inside main function: %d\n", globalVariable); // Output: Inside main function: 10
+
+    // Calling other functions
+    function1();
+    function2();
+
+    return 0;
+}
+
+// Function definition
+void function1() {
+    // Accessing the global variable in function1
+    printf("Inside function1: %d\n", globalVariable); // Output: Inside function1: 10
+}
+
+// Function definition
+void function2() {
+    // Modifying the global variable in function2
+    globalVariable = 20;
+    printf("Inside function2: %d\n", globalVariable); // Output: Inside function2: 20
+}
+In this example, globalVariable is declared outside any function, making it an external variable with global scope. It can be accessed and modified by all functions in the program.
+
+Scope of External Variables:
+File Scope: External variables have file scope, meaning they are visible to all functions within the same C file where they are declared. If the same variable name is declared in another file, it becomes a separate variable with a different storage location.
+
+Visibility: External variables are visible throughout the entire program, but their visibility can be limited using the static keyword. When a variable is declared as static, its scope is restricted to the file where it is declared.

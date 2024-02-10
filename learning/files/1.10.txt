@@ -1,0 +1,30 @@
+Comprehending Call by Value in C Programming: "Call by value" refers to the technique of providing arguments to a function in C programming. By using this method, copies of the argument values are sent to the function. In the given example, the function square accepts an integer parameter x and returns a copy of num (5) when called with square(num). The initial value of num outside the function is unaffected by any changes made to x inside the function.
+
+
+Call by Value Example: This example shows how call by value works. The original value of num in the main function does not change even though the function square squares the input x. The function's altered value remains unaffected by the original input, as confirmed by the printed output.
+
+#include <stdio.h>
+
+// Function declaration
+void square(int x);
+
+int main() {
+    int num = 5;
+
+    // Calling the function with call by value
+    square(num);
+
+    // The original value of num remains unchanged
+    printf("Original value: %d\n", num); // Output: Original value: 5
+
+    return 0;
+}
+
+// Function definition
+void square(int x) {
+    // Modifying the parameter has no effect on the original value
+    x = x * x;
+    printf("Squared value: %d\n", x); // Output: Squared value: 25
+}
+
+In C, the default method for supplying arguments is call by value, which offers efficiency and simplicity. It is important for developers to understand that any modifications made to parameters inside a function will not be reflected in the calling code. To modify original values within a function, alternate methods such as calling by reference utilizing pointers may be required.

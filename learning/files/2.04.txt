@@ -1,0 +1,15 @@
+DECLARATIONS
+
+**Variable Declaration:**
+
+In C, declaring a variable involves specifying its data type and name. For example, `int num;` declares an integer variable named `num`. Variables are containers for storing data, and their types determine the kind of data they can hold, such as integers (`int`), floating-point numbers (`float`), or characters (`char`).
+
+**Function Declaration:**
+
+Functions are blocks of code designed to perform specific tasks. To use a function, you must declare its prototype before calling it. A function declaration includes its return type, name, and parameters. For instance, `int add(int a, int b);` declares a function named `add` that takes two integers and returns an integer.
+
+**Array Declaration:**
+
+Arrays in C are collections of elements of the same data type stored in contiguous memory locations. Declaring an array involves specifying its type, name, and size. For example, `int numbers[5];` declares an integer array named `numbers` with a size of 5. Arrays provide a structured way to organize and manipulate data efficiently in C programs.
+
+Understanding declarations is fundamental for writing C programs. Variables, functions, and arrays are essential building blocks, and correctly declaring them ensures proper usage and adherence to the language's rules. Declarations set the foundation for organizing, storing, and processing data within the program's structure.way. 

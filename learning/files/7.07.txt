@@ -1,0 +1,132 @@
+    07  Line Input and Output;
+In C programming, line input and output are fundamental operations for reading and writing data to and from files or the console. Line-oriented functions provide a way to handle input and output in a line-by-line manner, making it convenient for processing text-based data. Here, we'll explore key functions for line input and output.
+
+### Line Input:
+
+#### `fgets`
+
+```c
+#include <stdio.h>
+
+int main() {
+    char buffer[100];
+
+    // Reading a line of input from the console
+    printf("Enter a line: ");
+    fgets(buffer, sizeof(buffer), stdin);
+
+    // Displaying the input
+    printf("You entered: %s", buffer);
+
+    return 0;
+}
+```
+
+- `fgets`: Reads a line of input from a specified stream (here, `stdin` for console input).
+
+### Line Output:
+
+#### `puts`
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Writing a line to the console
+    puts("Hello, World!");
+
+    return 0;
+}
+```
+
+- `puts`: Writes a string followed by a newline character to the console.
+
+#### `fputs`
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Writing a line to a file
+    FILE *file = fopen("output.txt", "w");
+    if (file != NULL) {
+        fputs("Hello, File!", file);
+        fclose(file);
+    }
+
+    return 0;
+}
+```
+
+- `fputs`: Writes a string to a specified file stream.
+
+### Line Input and Tokenization:
+
+#### `fgets` with `sscanf`
+
+```c
+#include <stdio.h>
+
+int main() {
+    char buffer[100];
+    int number;
+
+    // Reading a line of input and extracting an integer
+    printf("Enter a number: ");
+    fgets(buffer, sizeof(buffer), stdin);
+
+    // Extracting an integer from the input
+    sscanf(buffer, "%d", &number);
+
+    // Displaying the extracted integer
+    printf("You entered: %d\n", number);
+
+    return 0;
+}
+```
+
+- `sscanf`: Reads formatted data from a string.
+
+### Reading Lines from a File:
+
+#### `fgets` for File Input
+
+```c
+#include <stdio.h>
+
+int main() {
+    char buffer[100];
+
+    // Reading lines from a file
+    FILE *file = fopen("input.txt", "r");
+    if (file != NULL) {
+        while (fgets(buffer, sizeof(buffer), file) != NULL) {
+            printf("Line from file: %s", buffer);
+        }
+        fclose(file);
+    }
+
+    return 0;
+}
+```
+
+- `fgets`: Reads lines from a file.
+
+### Use Cases:
+
+1. **Reading Lines from Console:**
+   - `fgets` is commonly used to read lines of input from the console.
+
+2. **Writing Lines to Console:**
+   - `puts` and `printf` with newline characters are used for displaying lines on the console.
+
+3. **File Input and Output:**
+   - `fputs` and `fgets` are employed for reading and writing lines to and from files.
+
+4. **Tokenization:**
+   - `sscanf` is useful for extracting values from a string, enabling tokenization of input.
+
+5. **Line Processing:**
+   - Reading lines from a file using `fgets` facilitates line-by-line processing of data.
+
+Line input and output functions are essential for dealing with text-based data in C programming. Whether interacting with the console or reading from/writing to files, these functions provide a convenient and efficient way to handle lines of text. Proper error handling should be considered, especially when dealing with file operations.

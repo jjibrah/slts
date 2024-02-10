@@ -1,0 +1,31 @@
+1. Introduction to C:
+
+Historical Context:
+
+C programming language was created by Dennis Ritchie at Bell Labs in the early 1970s.
+Developed as an evolution of the B programming language.
+Became widely popular and influential, forming the basis for many other languages (e.g., C++, C#).
+Procedural Programming Language:
+
+C is often categorized as a procedural programming language, emphasizing functions and structured programming.
+Focuses on step-by-step procedures or routines for solving problems.
+Influences:
+
+C has had a profound impact on the development of programming languages, including C++, Objective-C, and more.
+Known for its efficiency, low-level access to memory, and direct hardware manipulation.
+2. Structure of a C Program:
+Basic Structure:
+
+A C program is organized into functions, with the main() function serving as the entry point.
+Functions can call each other, promoting modular and reusable code.
+Statements, Expressions, and Comments:
+
+Statements: Instructions that perform actions. Each statement ends with a semicolon (;).
+Expressions: Combinations of variables, operators, and constants that evaluate to a value.
+Comments: Used to annotate the code for better readability. Single-line comments start with //, and multi-line comments are enclosed between /* and */.
+Compilation Process:
+
+C programs undergo a two-step process: compilation and linking.
+Compilation: Converts the human-readable source code (.c files) into object code (.obj or .o files).
+Linking: Combines the object code with libraries to produce the final executable file.
+Understanding these fundamental aspects lays the groundwork for learning C programming. As you progress, you'll explore data types, control flow, functions, and more, building a solid foundation for writing efficient and powerful software in C.

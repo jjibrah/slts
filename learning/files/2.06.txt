@@ -1,0 +1,50 @@
+Relational and Logical Operators in C:
+
+**Relational Operators:**
+
+In C programming, relational operators are used to compare two values. They return either true (1) or false (0) based on the comparison result. Common relational operators include:
+
+- `==` (Equal to)
+- `!=` (Not equal to)
+- `<` (Less than)
+- `>` (Greater than)
+- `<=` (Less than or equal to)
+- `>=` (Greater than or equal to)
+
+Example:
+```c
+int a = 5, b = 8;
+if (a < b) {
+    // Code block executed if a is less than b
+}
+```
+
+**Logical Operators:**
+
+Logical operators are used to perform logical operations on Boolean values (true or false). The three main logical operators in C are:
+
+- `&&` (Logical AND)
+- `||` (Logical OR)
+- `!` (Logical NOT)
+
+Example:
+```c
+int x = 5, y = 10;
+if (x > 0 && y > 0) {
+    // Code block executed if both x and y are greater than 0
+}
+```
+
+**Combining Operators:**
+
+Relational and logical operators can be combined to form complex conditions. Parentheses are used to control the order of evaluation.
+
+Example:
+```c
+int num = 15;
+if (num >= 10 && (num % 2 == 1)) {
+    // Code block executed if num is greater than or equal to 10 and is an odd number
+}
+```
+
+Understanding relational and logical operators is fundamental for implementing decision-making structures and controlling the flow of a program based on conditions. They are extensively used in constructs like if statements and loops to create efficient and expressive code.

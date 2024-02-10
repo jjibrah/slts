@@ -1,0 +1,36 @@
+Variables in C:
+
+In C programming, a variable is a named storage location that holds a value. Before utilizing a variable, it must be declared with a specific data type, such as int, double, or char. For instance:
+
+int age;
+double height;
+char grade;
+
+These declarations indicate the creation of variables named age, height, and grade with respective data types.
+
+Initialization involves assigning an initial value to a variable at the time of declaration. The syntax is as follows:
+
+int age = 25;
+double height = 5.9;
+char grade = 'A';
+
+
+age = 30;
+
+Now, the variable age has been reassigned a value of 30.
+
+Variable types in C include int for integers, double for double-precision floating-point numbers, and char for characters.
+
+Arithmetic Expressions:
+
+Arithmetic expressions in C involve mathematical operations and can include variables, constants, and operators. Common arithmetic operators include addition +, subtraction -, multiplication *, division /, and modulus %.
+
+int a = 10, b = 5, result;
+
+result = a + b; // Addition
+result = a - b; // Subtraction
+result = a * b; // Multiplication
+result = a / b; // Division
+result = a % b; // Modulus
+Additionally, C provides increment (++) and decrement (--) operators for modifying variable values
+Understanding the order of operations and type conversions, both implicit and explicit, is crucial when working with arithmetic expressions in C. These concepts form the foundation for performing calculations and manipulating data within C programs.

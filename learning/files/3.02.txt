@@ -1,0 +1,21 @@
+if-else
+
+The if-else statement is a foundational control flow construct in programming that enables the execution of different code blocks based on whether a specified condition is true or false. This statement allows programs to make decisions dynamically during runtime, enhancing their flexibility and responsiveness. The basic syntax consists of an if block, where the condition is evaluated, and if it is true, the associated block of code is executed. Optionally, an else block can follow, providing an alternative set of instructions to be executed when the condition is false.
+
+#include <stdio.h>
+
+int main() {
+    // Example of if-else statement in C
+
+    // Input: a number
+    int num = 5;
+
+    // Check if the number is positive or not
+    if (num > 0) {
+        printf("The number is positive.\n");
+    } else {
+        printf("The number is non-positive.\n");
+    }
+
+    return 0;
+}

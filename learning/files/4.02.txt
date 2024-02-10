@@ -1,0 +1,23 @@
+FUNCTION RETURNING NON-INTEGERS
+
+In programming, functions that return non-integer values are crucial for handling a wide range of data types and performing diverse computations. These functions can return data types such as floating-point numbers, characters, structures, or custom-defined types. The return type of a function is specified in its declaration, indicating the kind of value it will produce when executed. This flexibility allows developers to design functions that cater to specific needs, making code more expressive and adaptable.
+
+For instance, consider a simple function that calculates the area of a circle, returning a floating-point value:
+
+```c
+#include <stdio.h>
+
+double calculateCircleArea(double radius) {
+    return 3.14159 * radius * radius;
+}
+
+int main() {
+    double area = calculateCircleArea(4.5);
+    printf("The area of the circle is: %lf\n", area);
+    return 0;
+}
+```
+
+In this example, the `calculateCircleArea` function takes the radius of a circle as a parameter and returns the computed area, which is a `double`. This allows for a more accurate representation of the area, which might not be an integer.
+
+Functions returning non-integers are not limited to basic types; they can also handle more complex structures or user-defined types. This capability enhances the modularity and reusability of code, enabling developers to create functions tailored to specific data processing requirements. Proper understanding and use of functions with non-integer return types contribute to writing versatile and maintainable code in a programming language.

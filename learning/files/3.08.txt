@@ -1,0 +1,58 @@
+Break and Continue
+The `break` and `continue` statements are control flow statements that are commonly used within loops to alter the normal flow of execution.
+
+`break` Statement:
+
+The `break` statement is used to exit a loop prematurely, bypassing the remaining iterations. It is often employed within loops to terminate the loop when a certain condition is met. Once the `break` statement is encountered, the control flow jumps to the statement following the loop.
+
+Example in C using a `for` loop with a `break` statement:
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Example of break statement in C
+
+    // Loop from 1 to 10 but break when i reaches 5
+    for (int i = 1; i <= 10; i++) {
+        if (i == 5) {
+            printf("Breaking the loop at i = %d\n", i);
+            break;
+        }
+        printf("Iteration %d\n", i);
+    }
+
+    return 0;
+}
+```
+
+In this example, the loop is set to iterate from 1 to 10, but the `break` statement is encountered when `i` equals 5, causing the loop to terminate prematurely.
+
+### `continue` Statement:
+
+The `continue` statement is used to skip the rest of the code inside a loop for the current iteration and move to the next iteration. It is often used when a specific condition is met, and you want to bypass the remaining code in the loop for that particular iteration.
+
+Example in C using a `for` loop with a `continue` statement:
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Example of continue statement in C
+
+    // Loop from 1 to 5 but skip the iteration when i is even
+    for (int i = 1; i <= 5; i++) {
+        if (i % 2 == 0) {
+            printf("Skipping even iteration at i = %d\n", i);
+            continue;
+        }
+        printf("Iteration %d\n", i);
+    }
+
+    return 0;
+}
+```
+
+In this example, the loop is set to iterate from 1 to 5, but the `continue` statement is encountered when `i` is even, causing the loop to skip the remaining code and move to the next iteration.
+
+Both `break` and `continue` statements provide mechanisms to control the flow of execution within loops, allowing for more flexible and tailored loop behavior.

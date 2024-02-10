@@ -1,0 +1,29 @@
+Conditional Expressions (Ternary Operators):
+
+Conditional expressions, commonly known as ternary operators, provide a concise method for writing simple conditional statements in a single line. The ternary operator ? : takes three operands and returns a value based on the evaluation of a condition.
+
+Explanation:
+
+If the condition is true, the expression before the : is evaluated and becomes the result.
+If the condition is false, the expression after the : is evaluated and becomes the result.
+
+Use Cases:
+
+Often used for concise assignments based on a condition.
+Useful when the true/false branches involve simple expressions.
+
+int num = -8;
+int absValue = (num >= 0) ? num : -num; // If num is non-negative, absValue = num; otherwise, absValue = -num;
+
+
+Advantages:
+
+Enhances code readability for short conditional assignments.
+Reduces the need for explicit if-else statements in simple scenarios.
+Understanding conditional expressions is crucial for writing clean and compact code, especially in situations where a quick decision needs to be made based on a condition.
+
+
+
+
+
+

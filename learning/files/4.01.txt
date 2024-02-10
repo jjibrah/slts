@@ -1,0 +1,94 @@
+BASICS OF FUNCTIONS
+
+Functions are essential building blocks in programming, allowing code to be organized into modular and reusable units. Functions encapsulate a set of instructions, making it easier to manage, understand, and maintain code. Here are the basics of functions:
+
+### Function Declaration and Definition:
+
+1. **Declaration:**
+   - A function must be declared before it is used. The declaration provides information about the function's name, return type, and parameters (if any).
+   - Example: `int add(int a, int b);`
+
+2. **Definition:**
+   - The function definition contains the actual implementation of the function, including the code that will be executed when the function is called.
+   - Example:
+     ```c
+     int add(int a, int b) {
+         return a + b;
+     }
+     ```
+
+### Function Call:
+
+To use a function, you call it in your code, providing any required arguments. The function executes its code and may return a value.
+
+Example:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int result = add(3, 5);
+    printf("The sum is: %d\n", result);
+    return 0;
+}
+```
+
+### Function Signature:
+
+The combination of a function's name, return type, and parameter types is known as its signature. It defines how the function can be used and what values it can return.
+
+Example: `int add(int a, int b);`
+
+### Return Statement:
+
+A function can return a value using the `return` statement. The type of value returned should match the function's declared return type.
+
+Example:
+
+```c
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+Parameters and Arguments:
+
+- **Parameters:** These are variables declared in the function's declaration and definition. They act as placeholders for the values provided when the function is called.
+  Example: `int add(int a, int b)`
+
+- **Arguments:** These are the actual values passed to a function when it is called.
+  Example: `add(3, 5);`
+
+### Void Functions:
+
+Functions can also have a return type of `void`, meaning they don't return any value.
+
+Example:
+
+```c
+void greet() {
+    printf("Hello, World!\n");
+}
+```
+
+Function Prototypes.
+
+A function prototype provides a forward declaration of a function before its actual implementation. It allows you to use the function before defining it.
+
+Example:
+
+```c
+int add(int a, int b); // Function prototype
+
+int main() {
+    int result = add(3, 5);
+    printf("The sum is: %d\n", result);
+    return 0;
+}
+
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+Functions play a crucial role in code organization, promoting modularity, readability, and maintainability in software development. They allow developers to break down complex problems into smaller, more manageable parts.

@@ -1,0 +1,36 @@
+Precedence and Order of Evaluation:
+
+Precedence:
+
+In C, precedence defines the order in which operators are evaluated within an expression. Operators with higher precedence are evaluated before those with lower precedence. The use of parentheses ( ) can override the default precedence, allowing explicit control over the order of evaluation.
+
+Example:
+
+int result = 3 + 5 * 2; 
+
+Order of Evaluation:
+
+The order of evaluation refers to the sequence in which subexpressions are computed within an expression. It's important to note that C does not explicitly define the order of evaluation for all operators, except for a few cases such as logical AND (&&), logical OR (||), and the comma (,).
+
+Example:
+
+int a = 5;
+int b = a++ * a++; 
+
+
+Use Cases:
+
+Understanding precedence is crucial when writing expressions where specific operations must be performed before others. Parentheses play a vital role in clarifying the intended order of evaluation, especially in complex expressions.
+
+Tips:
+
+Always utilize parentheses to enhance code clarity, particularly when there might be ambiguity about the order of evaluation.
+Exercise caution with expressions containing side effects, as the order of evaluation is not guaranteed.
+Understanding the concepts of precedence and order of evaluation is fundamental for writing correct and predictable C code. This knowledge ensures that expressions are evaluated in the intended order, reducing the risk of unexpected behavior and bugs in the program.
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+    10  Recursion; 
+
+Recursion is a programming concept in which a function calls itself either directly or indirectly to solve a problem. It is a powerful and elegant technique that simplifies complex problems by breaking them down into smaller, more manageable subproblems. Recursive functions have two main components: a base case that defines the simplest form of the problem and recursive cases that break down the problem into smaller instances.
+
+### Basic Structure of a Recursive Function:
+
+```c
+#include <stdio.h>
+
+// Recursive function example: Factorial calculation
+int factorial(int n) {
+    // Base case
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    // Recursive case
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int result = factorial(5);
+    printf("Factorial of 5 is: %d\n", result);
+    return 0;
+}
+```
+
+In this example, the `factorial` function calculates the factorial of a number using recursion. The base case is when `n` is 0 or 1, and the recursive case involves multiplying `n` by the factorial of `(n - 1)`.
+
+### Key Characteristics of Recursive Functions:
+
+1. **Base Case:** Every recursive function must have a base case to prevent infinite recursion. The base case represents the simplest form of the problem that can be directly solved without further recursion.
+
+2. **Recursive Case:** The recursive case defines how the problem is broken down into smaller subproblems, leading towards the base case. Recursive calls continue until reaching the base case.
+
+### Advantages of Recursion:
+
+1. **Simplicity and Readability:** Recursive solutions often lead to concise and readable code, expressing the problem-solving approach in a natural and straightforward manner.
+
+2. **Divide and Conquer:** Recursion follows the "divide and conquer" paradigm, breaking down a complex problem into simpler subproblems, solving them individually, and combining the results.
+
+### Considerations and Potential Issues:
+
+1. **Memory Usage:** Recursive functions may use additional memory on the call stack for each recursive call. Excessive recursion can lead to a stack overflow. Tail recursion optimization can mitigate this issue in some cases.
+
+2. **Performance:** Recursive solutions may not always be the most efficient, especially for problems that can be solved iteratively. Some languages and compilers optimize tail-recursive calls to improve performance.
+
+### Example: Fibonacci Sequence:
+
+The Fibonacci sequence is often used to demonstrate recursion:
+
+```c
+#include <stdio.h>
+
+// Recursive function for Fibonacci sequence
+int fibonacci(int n) {
+    // Base case
+    if (n <= 1) {
+        return n;
+    }
+    // Recursive case
+    else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+int main() {
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", fibonacci(i));
+    }
+    return 0;
+}
+```
+
+This example calculates Fibonacci numbers using recursion, showcasing how each number is the sum of the two preceding ones.
+
+Recursion is a powerful programming technique, but its use should be balanced with considerations of performance, memory usage, and the availability of iterative solutions. It is particularly well-suited for problems that exhibit a natural recursive structure.

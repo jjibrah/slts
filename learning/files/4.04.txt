@@ -1,0 +1,74 @@
+SCOPE RULES
+In programming, scope rules determine the visibility and accessibility of variables within different parts of the code. Understanding scope is crucial for writing maintainable and bug-free programs. Two primary types of scope are local scope and global scope.
+
+### Local Scope:
+
+Variables declared within a block, such as inside a function or a loop, have local scope. They are accessible only within that block and not visible to the rest of the program. Local variables are typically used for temporary storage within a specific context.
+
+Example:
+
+```c
+#include <stdio.h>
+
+void exampleFunction() {
+    int localVar = 10;  // Local variable
+    printf("Local variable: %d\n", localVar);
+}
+
+int main() {
+    exampleFunction();
+    // printf("%d\n", localVar); // Error: localVar not visible here
+    return 0;
+}
+```
+
+In this example, `localVar` is a local variable within the `exampleFunction` and cannot be accessed in the `main` function.
+
+### Global Scope:
+
+Variables declared outside any function or block have global scope. They are visible and accessible throughout the entire program. Global variables can be modified by any function, which can lead to unintended side effects if not managed carefully.
+
+Example:
+
+```c
+#include <stdio.h>
+
+int globalVar = 20;  // Global variable
+
+void exampleFunction() {
+    printf("Global variable: %d\n", globalVar);
+}
+
+int main() {
+    exampleFunction();
+    printf("Global variable: %d\n", globalVar);
+    return 0;
+}
+```
+
+Here, `globalVar` is a global variable that can be accessed and modified by both `exampleFunction` and `main`.
+
+### Shadowing:
+
+Shadowing occurs when a local variable has the same name as a global variable, effectively hiding the global variable within the scope of the function. It's essential to be aware of shadowing to avoid confusion and unintended side effects.
+
+Example:
+
+```c
+#include <stdio.h>
+
+int x = 5;  // Global variable
+
+void exampleFunction() {
+    int x = 10;  // Local variable, shadows the global variable
+    printf("Local variable: %d\n", x);
+}
+
+int main() {
+    exampleFunction();
+    printf("Global variable: %d\n", x);  // Accesses the global variable
+    return 0;
+}
+```
+
+Understanding and managing scope rules are critical for writing robust and maintainable code. Proper use of local and global variables helps control data visibility and prevent naming conflicts, contributing to code clarity and readability.

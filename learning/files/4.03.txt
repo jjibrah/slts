@@ -1,0 +1,33 @@
+EXTERNAL VARIABLES
+
+In programming, external variables, also known as global variables, are variables that are declared outside any function and are accessible from anywhere in the program. Unlike local variables, which are confined to the scope of a specific function, external variables have a global scope, making them visible to all functions within the program. While they offer a convenient way to share data between functions, their use should be approached with caution due to potential issues related to modularity and maintainability.
+
+### Declaration and Definition:
+
+External variables are typically declared at the top of a source file, outside any function, using the `extern` keyword for declaration and providing the actual definition later in the code or in a different file.
+
+Example:
+
+```c
+// External variable declaration
+extern int globalVar;
+
+int main() {
+    // Accessing the external variable
+    globalVar = 42;
+    return 0;
+}
+
+// External variable definition
+int globalVar;
+```
+
+### Modifiability and Side Effects:
+
+Global variables can be modified by any function in the program, leading to potential side effects and making it challenging to track changes. It is essential to carefully manage the modification of global variables to maintain code clarity and avoid unintended consequences.
+
+### Use Cases and Best Practices:
+
+While global variables can be useful for certain scenarios, such as storing configuration settings or shared data across functions, they should be used judiciously. Overuse of global variables can lead to code that is difficult to understand and maintain. It is often preferable to use function parameters and return values for data exchange between functions, promoting encapsulation and reducing dependencies.
+
+In summary, external variables provide a way to share data globally in a program, but their use should be approached carefully to ensure code clarity, maintainability, and minimize unintended side effects. It's generally recommended to favor local variables and function parameters when possible, as they contribute to more modular and understandable code.

@@ -1,0 +1,45 @@
+    05  Arithmetic Operators:
+
+Basic Arithmetic Operations
+
+C programming includes several arithmetic operators to perform basic mathematical operations. The primary arithmetic operators are:
+
+- `+` (Addition)
+- `-` (Subtraction)
+- `*` (Multiplication)
+- `/` (Division)
+- `%` (Modulus - returns the remainder after division)
+
+Example:
+```c
+int a = 10, b = 3, result;
+result = a + b; // Addition
+result = a - b; // Subtraction
+result = a * b; // Multiplication
+result = a / b; // Division
+result = a % b; // Modulus
+```
+
+**Increment and Decrement Operators:**
+
+C provides increment (`++`) and decrement (`--`) operators for convenient manipulation of variables. They can be used as either prefix or postfix operators.
+
+Example:
+```c
+int x = 5;
+x++; // Increment x by 1 (x becomes 6)
+x--; // Decrement x by 1 (x becomes 5 again)
+```
+
+**Compound Assignment Operators:**
+
+Compound assignment operators combine an assignment with another operation, providing a concise way to update variables.
+
+Example:
+```c
+int num = 10;
+num += 5; // Equivalent to num = num + 5; (num becomes 15)
+num *= 2; // Equivalent to num = num * 2; (num becomes 30)
+```
+
+Understanding and using arithmetic operators is essential for performing mathematical calculations in C. These operators are fundamental building blocks for creating algorithms, manipulating data, and performing various computations in C programs.

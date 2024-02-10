@@ -1,0 +1,26 @@
+C Character Arrays: Also called strings, character arrays in C are just collections of characters that end with the null character ('\0'). A string can be declared and initialized in C programming by using string literals or by providing individual characters. Because string manipulation methods, printf, scanf, and other functions depend on the null character to identify the end of a string, null-terminated strings are essential.
+
+Declaration and Initialization, for instance
+The example given shows how to define and initialize a character array called greeting. It starts with the characters of the word "Hello," and ends with the null character. As an alternative, the example shows how to initialize a string literal. The representation of strings in C is then shown by printing the resultant string using printf's %s format specifier.
+
+#include <stdio.h>
+
+int main() {
+    char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    // Alternatively, you can use a string literal for initialization
+    // char greeting[] = "Hello";
+
+    // Printing the string
+    printf("Greeting: %s\n", greeting); // Output: Greeting: Hello
+
+    return 0;
+}
+
+It is essential to comprehend character arrays and null-terminated strings in order to manipulate strings in C properly. Correct handling of these strings is necessary to avoid problems during program execution, such as buffer overflows.
+
+
+
+
+
+
+

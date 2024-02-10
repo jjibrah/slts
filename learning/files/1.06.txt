@@ -1,0 +1,16 @@
+Character Source and Destination in C:
+
+
+The standard I/O library's (stdio.h) functions enable C's character input and output. Getchar() and putchar() are two often used routines for managing individual characters.
+
+The getchar() function is used to read a single character from standard input, which is usually the keyboard. The character is returned as an int. The role has been prototyped as:
+int getchar(void);
+
+
+inside of int getchar(void);putchar() Putchar() is a function that outputs a single character to the standard output, which is frequently the console. To write a character, an int argument must be provided. The feature is prototyped as
+int putchar(int char);
+
+
+Character Input Loop: Characters can be read until a predetermined condition is satisfied by using a loop. Until the Enter key ('\n') is detected, the loop keeps going.
+
+In C programming, character input and output functions are fundamental, particularly for text-based applications. They are commonly used in conjunction with strings to facilitate the effective processing of textual material.

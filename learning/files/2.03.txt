@@ -1,0 +1,12 @@
+Constants in C Programming:
+
+Integer Constants:
+
+Integer constants in C are unchanging values of the `int` data type. They can be represented in decimal, octal, or hexadecimal notation. For example, `int num = 42;` initializes an integer constant named `num` with the value 42. Constants provide a way to use fixed values in the program, enhancing code readability and making it easier to understand the purpose of specific values.
+
+Floating-Point Constants:
+
+Floating-point constants in C represent real numbers with fractional parts. They can be specified using decimal notation or scientific notation. For instance, `float pi = 3.14;` declares a floating-point constant `pi` with the value 3.14. Floating-point constants are crucial for handling non-integer numerical data in calculations and mathematical operations within C programs.
+
+Character Constants:
+Character constants in C are single characters enclosed in single quotes, such as `'A'` or `'5'`. They represent specific characters and are often used in character-related operations and comparisons. For example, `char grade = 'A';` declares a character constant named `grade` with the value 'A'. Understanding different types of constants allows programmers to choose the appropriate data representation for specific scenarios, contributing to code clarity and efficiency.

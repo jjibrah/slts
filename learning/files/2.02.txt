@@ -1,0 +1,13 @@
+Data Types and Sizes in C Programming:
+
+Fundamental Data Types:
+
+C programming language provides several fundamental data types, including `int`, `char`, `float`, and `double`. These data types determine the type of values a variable can hold. For instance, `int num = 42;` declares an integer variable `num` with the value 42. Understanding fundamental data types is essential for effective variable declaration and manipulation in C programs.
+
+Modifiers and Sizes:
+
+Data types can be modified using type modifiers to adjust their range or size. For instance, `long int` extends the range of integers. The `sizeof` operator in C helps determine the size of a variable or data type in bytes. For example, `sizeof(int)` returns the size of an integer in bytes. Proper usage of data types and modifiers ensures efficient memory utilization and prevents overflow or truncation issues in C programs.
+
+Derived Data Types:
+
+Derived data types in C include arrays, pointers, structures, and unions. These types are constructed from fundamental data types and offer more complex and versatile ways to organize and manage data. Arrays allow the grouping of elements of the same type, while pointers store memory addresses. Structures and unions enable the creation of user-defined composite data types. A solid understanding of derived data types is crucial for building sophisticated data structures and implementing advanced programming concepts in C.

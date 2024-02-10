@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1707575214 source:c:\users\administrator\desktop\slts\learning\main.c
+	<stdio.h>
+	<string.h>
+	<limits.h>
+	<ctype.h>
+	<time.h>
+	<windows.h>
+	<unistd.h>
+	"chapters.h"
+
+1707190611 c:\users\administrator\desktop\slts\learning\chapters.h
+

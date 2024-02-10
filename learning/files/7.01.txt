@@ -1,0 +1,117 @@
+    01  Standard Input and Output; 
+
+In C programming, standard input and output are essential concepts for interacting with the user and displaying information on the console. The standard input is typically the keyboard, and the standard output is the console or terminal where the program is executed. Key functions for standard input and output include `printf` for formatted output and `scanf` for formatted input. Here, we'll explore the use of standard input and output in C.
+
+### Standard Output (printf):
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Basic output
+    printf("Hello, World!\n");
+
+    // Formatted output
+    int number = 42;
+    printf("The answer is: %d\n", number);
+
+    // Multiple values in a single printf
+    double pi = 3.14159;
+    char message[] = "Welcome!";
+    printf("Pi: %f, Message: %s\n", pi, message);
+
+    return 0;
+}
+```
+
+In this example, `printf` is used for both basic and formatted output. Format specifiers like `%d` and `%f` are placeholders for variables, and they indicate the type of the corresponding arguments.
+
+### Standard Input (scanf):
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Reading an integer
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    printf("You entered: %d\n", age);
+
+    // Reading a floating-point number
+    double weight;
+    printf("Enter your weight (in kg): ");
+    scanf("%lf", &weight);
+    printf("Your weight is: %f kg\n", weight);
+
+    return 0;
+}
+```
+
+Here, `scanf` is used for reading user input. Format specifiers like `%d` and `%lf` are used to indicate the type of the expected input.
+
+### Combining Input and Output:
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Combining input and output
+    char name[50];
+    int age;
+
+    printf("Enter your name: ");
+    scanf("%s", name);
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Hello, %s! You are %d years old.\n", name, age);
+
+    return 0;
+}
+```
+
+This example combines both `printf` and `scanf` to interactively gather information from the user and then display a message.
+
+### Standard Error (fprintf to stderr):
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Printing an error message to stderr
+    fprintf(stderr, "This is an error message.\n");
+
+    return 0;
+}
+```
+
+`fprintf` can be used to print error messages to the standard error stream (`stderr`). This is useful for distinguishing error messages from regular output.
+
+### Use Cases:
+
+1. **User Interaction:**
+   - Use `printf` and `scanf` for interactive communication with the user.
+
+2. **Formatted Output:**
+   - Display formatted and well-structured information using `printf`.
+
+3. **Error Reporting:**
+   - Print error messages to `stderr` using `fprintf` for better visibility.
+
+### Best Practices:
+
+1. **Clear Prompts:**
+   - Provide clear and concise prompts to guide user input.
+
+2. **Validation:**
+   - Validate user input to ensure it matches the expected format.
+
+3. **Error Handling:**
+   - Use `fprintf(stderr, ...)` for error messages to distinguish them from regular output.
+
+4. **Formatting:**
+   - Utilize format specifiers to control the appearance of output.
+
+Standard input and output functions are fundamental for creating interactive and informative C programs. Proper use of `printf` and `scanf` allows for effective communication with users, and understanding error reporting with `fprintf(stderr, ...)` helps in identifying and handling issues during program execution.

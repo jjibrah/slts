@@ -1,0 +1,108 @@
+    06  Error Handling Stderr and Exit; (2)
+
+Error handling is a critical aspect of writing robust and reliable C programs. When errors occur during program execution, it's important to provide informative messages and, if necessary, terminate the program gracefully. The `stderr` stream and the `exit` function play key roles in error handling in C.
+
+### Writing Error Messages to `stderr`:
+
+#### `fprintf` to `stderr`
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("nonexistent.txt", "r");
+
+    if (file == NULL) {
+        // Writing an error message to stderr
+        fprintf(stderr, "Error opening file: nonexistent.txt\n");
+        return 1; // Indicate an error to the calling environment
+    }
+
+    // Continue processing the file...
+
+    fclose(file);
+
+    return 0;
+}
+```
+
+- `fprintf`: Writes a formatted string to a specified stream (`stderr` in this case).
+
+### Exiting the Program:
+
+#### `exit`
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int divisor = 0;
+
+    if (divisor == 0) {
+        // Displaying an error message and exiting the program with an error code
+        fprintf(stderr, "Error: Division by zero\n");
+        exit(EXIT_FAILURE);
+    }
+
+    // Proceeding with the program...
+
+    return 0;
+}
+```
+
+- `exit`: Terminates the program and returns an exit status to the calling environment.
+
+### Combining `stderr` and `exit` for Error Handling:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    FILE *file = fopen("nonexistent.txt", "r");
+
+    if (file == NULL) {
+        // Writing an error message to stderr
+        fprintf(stderr, "Error opening file: nonexistent.txt\n");
+
+        // Exiting the program with an error code
+        exit(EXIT_FAILURE);
+    }
+
+    // Continue processing the file...
+
+    fclose(file);
+
+    return 0;
+}
+```
+
+In this example, an error message is written to `stderr` when attempting to open a file that doesn't exist. The program then exits with `EXIT_FAILURE` to indicate an error to the calling environment.
+
+### Use Cases:
+
+1. **File Operations:**
+   - When working with files, checking for errors during file opening, reading, or writing is crucial.
+
+2. **Division by Zero:**
+   - Detecting and handling cases where division by zero might occur.
+
+3. **Memory Allocation:**
+   - Checking for errors when dynamically allocating memory using functions like `malloc`, `calloc`, or `realloc`.
+
+4. **Command-Line Arguments:**
+   - Verifying and handling errors related to command-line arguments.
+
+### Best Practices:
+
+1. **Informative Messages:**
+   - Error messages should be informative, indicating the nature of the error and, if possible, suggesting corrective actions.
+
+2. **Return Codes:**
+   - Use appropriate exit codes to indicate the success or failure of a program to the calling environment. `EXIT_SUCCESS` and `EXIT_FAILURE` are standard codes.
+
+3. **Graceful Termination:**
+   - Ensure that the program terminates gracefully, closing files and freeing allocated memory before exiting.
+
+Error handling is a crucial part of writing reliable C programs. Using `stderr` for error messages and `exit` for program termination helps in providing meaningful feedback to users or calling environments when unexpected issues occur. Proper error handling contributes to the robustness and maintainability of C code.

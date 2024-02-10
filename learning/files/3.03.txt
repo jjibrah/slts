@@ -1,0 +1,31 @@
+Else-If
+
+The else if statement is an extension of the basic if-else construct, providing a way to handle multiple conditions sequentially. This statement allows for a more granular decision-making process by evaluating a series of conditions in order. If the first if condition is false, the program moves on to the next else if condition, and so on until a true condition is found, or the final else block is executed if none of the conditions are met. This enables programmers to create complex decision trees in their code, accommodating various scenarios.
+
+#include <stdio.h>
+
+int main() {
+    // Example of else-if statement in C
+
+    // Input: a number
+    int num = 5;
+
+    // Check if the number is positive, negative, or zero
+    if (num > 0) {
+        printf("The number is positive.\n");
+    } else if (num < 0) {
+        printf("The number is negative.\n");
+    } else {
+        printf("The number is zero.\n");
+    }
+
+    return 0;
+}
+
+In this example, the program first checks if num is greater than 0. If true, it prints a message indicating that the number is positive. If the first condition is false, it moves to the else if block and checks if num is less than 0. If this condition is true, it prints a message stating that the number is negative. If both conditions are false, the program proceeds to the else block, printing a message indicating that the number is zero. This demonstrates how the else if statement allows for the sequential evaluation of conditions, providing a more nuanced decision-making process in the code.
+
+
+
+
+
+

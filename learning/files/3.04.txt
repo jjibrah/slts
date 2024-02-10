@@ -1,0 +1,49 @@
+
+Switch
+
+The switch statement is another powerful control flow structure in programming languages, designed to simplify the handling of multiple conditions. It provides a way to express multi-way branches more clearly than using a series of nested if-else statements. The switch statement evaluates an expression and compares its value to constant case labels. When a match is found, the associated block of code is executed. Additionally, the switch statement often includes a default case to handle situations where none of the specified cases match the expression.
+#include <stdio.h>
+
+int main() {
+    // Example of switch statement in C
+
+    // Input: a number representing a day of the week
+    int day = 3;
+
+    // Switch statement to determine the day of the week
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        case 3:
+            printf("Wednesday\n");
+            break;
+        case 4:
+            printf("Thursday\n");
+            break;
+        case 5:
+            printf("Friday\n");
+            break;
+        case 6:
+            printf("Saturday\n");
+            break;
+        case 7:
+            printf("Sunday\n");
+            break;
+        default:
+            printf("Invalid day\n");
+    }
+
+    return 0;
+}
+In this example, the switch statement is used to determine the day of the week based on the value of the day variable. Each case represents a possible value, and the corresponding block of code is executed when a match is found. The break statement is crucial to exit the switch block after a match to avoid falling through to subsequent cases. The default case handles any value that doesn't match the specified cases, providing a fallback option. The switch statement is particularly useful when dealing with scenarios involving multiple possible discrete values.
+
+
+
+
+
+
+
